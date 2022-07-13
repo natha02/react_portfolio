@@ -5,7 +5,7 @@ import About from "./components/about/About";
 import Competences from "./components/competences/Competences";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { PacmanLoader } from "react-spinners";
 
 const App = () => {
