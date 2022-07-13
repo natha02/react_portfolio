@@ -5,7 +5,7 @@ import About from "./components/about/About";
 import Competences from "./components/competences/Competences";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import {HashRouter as Router, Route, Routes} from "react-router-dom";
+import {HashRouter as Route, Routes} from "react-router-dom";
 import {PacmanLoader} from "react-spinners";
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
                     )
                     :
                     (
-                        <Router basename="/react_portfolio">
+                        <HashRouter basename="/react_portfolio">
                             <Nav/>
                             <Routes>
                                 <Route path="/" element={<Header/>}/>
@@ -44,7 +44,7 @@ const App = () => {
                                 <Route path="/portfolio" element={<Portfolio/>}/>
                                 <Route path="/contact" element={<Contact/>}/>
                             </Routes>
-                        </Router>
+                        </HashRouter>
                     )
 
             }
