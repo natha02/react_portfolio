@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react_portfolio/static/css/main.09f32c75.css",
+    "main.js": "/react_portfolio/static/js/main.6cb3b6e1.js",
+    "static/media/Me.JPG": "/react_portfolio/static/media/Me.757897615c5e1f6b6c92.JPG",
+    "static/media/project3.jpeg": "/react_portfolio/static/media/project3.e6268174bb9cc5bf13c0.jpeg",
+    "static/media/project1.jpeg": "/react_portfolio/static/media/project1.aaa7c73ec9bb33580c34.jpeg",
+    "static/media/project2.jpeg": "/react_portfolio/static/media/project2.437a7f530268fcdd3dd8.jpeg",
+    "static/media/fond.png": "/react_portfolio/static/media/fond.acfa1e36470e6a508858.png",
+    "static/media/Andrilalaina_KALAHA_CV.PDF": "/react_portfolio/static/media/Andrilalaina_KALAHA_CV.ac39073d3cef365b1b8c.PDF",
+    "static/media/Comfortaa-Regular.ttf": "/react_portfolio/static/media/Comfortaa-Regular.886fcced57daea5944e7.ttf",
+    "static/media/helvetica-neu.ttf": "/react_portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "index.html": "/react_portfolio/index.html",
+    "main.09f32c75.css.map": "/react_portfolio/static/css/main.09f32c75.css.map",
+    "main.6cb3b6e1.js.map": "/react_portfolio/static/js/main.6cb3b6e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09f32c75.css",
+    "static/js/main.6cb3b6e1.js"
+  ]
+}
