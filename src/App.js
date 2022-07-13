@@ -30,7 +30,7 @@ const App = () => {
           />
         </div>
       ) : (
-        <Router basename="/react_portfolio">
+        <Router>
           <Nav />
           <Routes>
             <Route path="/" element={<Header />} />
