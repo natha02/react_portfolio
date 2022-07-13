@@ -5,7 +5,6 @@ import About from "./components/about/About";
 import Competences from "./components/competences/Competences";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import Particle from "./components/particle/Particle";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {PacmanLoader} from "react-spinners";
 
@@ -26,7 +25,6 @@ const App = () => {
                     ?
                     (
                         <div id="pacman">
-                            <Particle/>
                             <PacmanLoader
                                           size={50}
                                           color={"#fff"}
@@ -38,7 +36,6 @@ const App = () => {
                     :
                     (
                         <Router>
-                            <Particle/>
                             <Nav/>
                             <Routes>
                                 <Route path="/" element={<Header/>}/>
