@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from "react";
+import Header from "./components/header/Header";
+import Nav from "./components/nav/Nav";
+import About from "./components/about/About";
+import Competences from "./components/competences/Competences";
+import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
+import Particle from "./components/particle/Particle";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {PacmanLoader} from "react-spinners";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
+
+    return (
+        <>
+            {
+                loading
+                    ?
+                    (
+                        <div id="pacman">
+                            <Particle/>
+                            <PacmanLoader
+                                          size={50}
+                                          color={"#fff"}
+                                          loading={loading}
+                                          speedMultiplier={1}
+                            />
+                        </div>
+                    )
+                    :
+                    (
+                        <Router>
+                            <Particle/>
+                            <Nav/>
+                            <Routes>
+                                <Route path="/" element={<Header/>}/>
+                                <Route path="/about" element={<About/>}/>
+                                <Route path="/competences" element={<Competences/>}/>
+                                <Route path="/portfolio" element={<Portfolio/>}/>
+                                <Route path="/contact" element={<Contact/>}/>
+                            </Routes>
+                        </Router>
+                    )
+
+            }
+
+        </>
+    );
 }
+
 
 export default App;

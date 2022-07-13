@@ -1,13 +1,201 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("./assets/fonts/helvetica-neu.ttf") format("ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: "Comfortaa";
+    src: url("./assets/fonts/Comfortaa-Regular.ttf") format("ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Comfortaa, "sans-serif";
+}
+
+:root {
+    --color-bg: #845ec2;
+    --color-bg-variant: #064663;
+    --color-primary: #ECB365;
+    --color-primary-variant: #064663;
+    --color-white: #fff;
+    --color-light: #4E4E50;
+
+    --container-width-lg: 75%;
+    --container-width-md: 85%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: var(--color-white);
+    line-height: 1.7;
+    background:linear-gradient(to right top,
+    #845ec2,
+    #6371ce,
+    #3d80d3,
+    #138dd0,
+    #0097c9,
+    #009fc6,
+    #00a7c0,
+    #00aeb8,
+    #00b7b0,
+    #00bf9e,
+    #00c583,
+    #00c960);
+}
+
+/*-=================PACMAN loader================-*/
+#pacman {
+    background:linear-gradient(to right top,
+    #845ec2,
+    #6371ce,
+    #3d80d3,
+    #138dd0,
+    #0097c9,
+    #009fc6,
+    #00a7c0,
+    #00aeb8,
+    #00b7b0,
+    #00bf9e,
+    #00c583,
+    #00c960);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/*=========== GENERAL STYLE ===========*/
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px var(--color-primary-variant);
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+section {
+    margin-top: 0.6rem;
+    background-image: url("assets/pictures/fond.png");
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+}
+
+section > h2 {
+    color: var(--color-primary);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+section > h5{
+    font-size: 1.5rem;
+}
+
+h2 , h3 {
+    font-family: Comfortaa , sans-serif;
+}
+
+h4 , h6 , small {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-white);
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition)
+}
+
+.btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*=========MEDIA QUERY MEDIUM==========*/
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-bottom: 6rem;
+    }
+}
+
+/*=========MEDIA QUERY SMALL==========*/
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section > h2 {
+        margin-bottom: 2rem;
+    }
+
+    .left,
+    .next{
+        display: none;
+    }
 }

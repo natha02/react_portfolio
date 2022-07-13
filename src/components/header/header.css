@@ -1,0 +1,164 @@
+header{
+    height: 100vh;
+    padding-top: 3rem ;
+    overflow: hidden;
+    background-image: url("../../assets/pictures/fond.png");
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header_container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+header h5{
+    color: var(--color-white);
+    margin-top: 5rem;
+}
+/*================= TITLE ANIMATION===============*/
+.nom{
+    --d: 0s;
+}
+.prenom {
+    --d: 3s;
+}
+
+.title{
+    position: relative;
+}
+
+.rotate-words{
+    display: inline;
+    top: -5rem;
+}
+.rotate-words span {
+    font-size: 2rem;
+    color: var(--color-white);
+    width: max-content;
+    position: absolute;
+    background-color: var(--color-primary-variant);
+    padding-inline: 10px;
+    opacity: 0;
+    transform-origin: 10% 75%;
+    animation: rotateWords 6s var(--d) linear infinite;
+}
+
+@keyframes rotateWords {
+    5% {
+        opacity: 1;
+    }
+    10%, 20% {
+        opacity: 1;
+        transform: rotate(3deg);
+    }
+    15%{
+        transform: rotate(-1deg);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(90px) rotate(10deg);
+    }
+}
+
+.hello {
+    font-size: 3rem;
+    margin-right: 10rem;
+    font-family: 'Sacramento', cursive;
+}
+
+/*================= CTA ===================*/
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/*================= HEADER SOCIALS ===================*/
+.header_socials{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+}
+
+.header_socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.header_socials-icon{
+    font-size: 2rem;
+}
+
+.header_socials a:hover{
+    color: var(--color-white);
+}
+
+/*================= HEADER IMAGE ===================*/
+
+.me{
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 31rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: rgba(6, 70, 99, 0.5) 6px 2px 16px 0, rgba(6, 70, 99, 0.8) -6px -2px 16px 0;
+}
+
+.me img{
+    width: 22rem;
+    height: 31rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*=============NEXT============*/
+.next{
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+}
+.icon{
+    font-size: 2.5rem;
+}
+.icon:hover{
+    color: var(--color-light);
+}
+
+/*=========MEDIA QUERY MEDIUM==========*/
+@media  screen and (max-width: 1024px) {
+    .next{
+        display: none;
+    }
+    .left{
+        display: none;
+    }
+}
+
+/*=========MEDIA QUERY SMALL==========*/
+@media  screen and (max-width: 600px) {
+    header{
+        height: 100vh;
+    }
+    .header_socials, .scroll_down{
+        display: none;
+    }
+    .rotate-words span {
+        font-size: 1rem;
+    }
+}

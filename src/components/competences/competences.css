@@ -1,0 +1,76 @@
+#experiences{
+    min-height: 100vh;
+}
+.experiences_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.experiences_container > div {
+    background: var(--color-bg-variant);
+    padding: 2rem 2rem;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.experiences_container>div h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+.experiences_container>div h4{
+    color: var(--color-white);
+
+}
+
+#experiences h5{
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+}
+
+.experiences_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+}
+
+.experiences_details{
+    display: flex;
+    gap: 1rem;
+}
+
+.experiences_details-icon{
+    color: var(--color-light);
+    font-size: 2rem;
+}
+
+/*=========MEDIA QUERY MEDIUM==========*/
+@media  screen and (max-width: 1024px) {
+    .experiences_container{
+        grid-template-columns: 1fr;
+    }
+
+    .experiences_container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .experiences_content {
+        padding: 1rem;
+    }
+}
+
+/*=========MEDIA QUERY SMALL==========*/
+@media  screen and (max-width: 600px) {
+    .experiences_container{
+        gap: 1rem;
+    }
+
+    .experiences_container> div{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}

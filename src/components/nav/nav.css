@@ -1,0 +1,40 @@
+nav {
+    background: var(--color-primary-variant);
+    width: max-content;
+    padding: 0.5rem 1.7rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    display: flex;
+    gap: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+}
+
+nav a{
+    background: transparent;
+    padding: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    display: flex;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+nav a:hover{
+    background: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+
+}
+
+nav a.active {
+    background: var(--color-bg);
+    color: var(--color-primary-variant);
+}
+
+.nav-icon{
+    font-size: 1.3rem;
+}

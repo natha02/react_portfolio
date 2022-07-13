@@ -1,0 +1,189 @@
+#about{
+    min-height: 100vh;
+}
+
+.about_container {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 15%;
+    height: 100%;
+}
+
+
+/*==============CUBE============*/
+.stage-cube-cont {
+    padding-top: 5rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.cube-spinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+}
+
+.cube-spinner div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--color-primary);
+    background: rgba(37, 63, 75, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px 0 var(--color-primary);
+}
+
+.cube-spinner .face1{
+    transform: translateZ(100px);
+}
+
+.cube-spinner .face2{
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube-spinner .face3{
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.cube-spinner .face4{
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.cube-spinner .face5{
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.cube-spinner .face6{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.icon-cube{
+    font-size: 100px;
+}
+
+
+@keyframes spincube {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    83% {
+        transform: rotateX(90deg);
+    }
+}
+
+
+/*==============CUBE-END============*/
+
+.about_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 5fr);
+    gap: 1.5rem;
+}
+
+.about_card {
+    background: var(--color-bg-variant);
+    border: 1px solid var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+
+.about_icon {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+
+#about h5 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+}
+#about h2{
+    color: var(--color-primary);
+}
+
+.about_card small {
+    font-size: 0.5rem;
+    color: var(--color-white);
+}
+
+.about_content p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+    text-align: justify;
+}
+
+.next {
+    position: absolute;
+    right: 4rem;
+    bottom: 2rem;
+}
+
+.left {
+    position: absolute;
+    left: 4rem;
+    bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*=========MEDIA QUERY MEDIUM==========*/
+@media screen and (max-width: 1024px) {
+    .about_container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stage-cube-cont{
+        display: none;
+    }
+
+    .about_content p {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/*=========MEDIA QUERY SMALL==========*/
+@media screen and (max-width: 600px) {
+    .about_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .stage-cube-cont{
+        display: none;
+    }
+
+    .about_content {
+        text-align: center;
+    }
+
+    .about_content p {
+        margin: 1.5rem 0;
+    }
+}
